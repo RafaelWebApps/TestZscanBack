@@ -1,0 +1,23 @@
+{
+  "name": "testzscanback",
+  "version": "0.0.1",
+  "description": "Desenvolver aplicações para teste na Zscan softwares.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelWebApps/TestZscanBack.git"
+  },
+  "author": "Rafael de Aquino Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelWebApps/TestZscanBack/issues"
+  },
+  "homepage": "https://github.com/RafaelWebApps/TestZscanBack#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^6.5.0"
+  }
+}
