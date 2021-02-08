@@ -13,4 +13,4 @@ app.use(boyParser.json());
 
 app.use("/", Routes);
 
-app.listen(port, ()=> console.log(`Escutando na porta ${port}`))
+app.listen(process.env.PORT || port, ()=> console.log(`Execuntando com sucesso`))
