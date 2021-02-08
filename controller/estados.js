@@ -7,7 +7,17 @@ const buscaTodos = async (req, res)=>{
     res.status(200).json(formataEstado);
 }
 
+const savEstado = async(req, res)=>{
+    await sequelize.sync();
+    const addEstado = await Estados.create({
+        estado: 'Goiás',
+        uf: 'GO'
+    });
+    res.status(200).json(addEstado);
+}
+
 
 module.exports = {
-    buscaTodos
+    buscaTodos,
+    savEstado
 }

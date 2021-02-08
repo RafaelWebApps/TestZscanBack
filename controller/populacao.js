@@ -27,6 +27,17 @@ const populacaoPorEstado = async (req, res)=>{
     res.json(formataPopulacao);
 }
 
+const populacaoMaisEstado = async (req, res)=>{
+    const obterTodos = await Populacao.findAll();
+    const formataPopulacao = obterTodos.map(item=>{ 
+        return {
+            uf: item.uf, 
+            população: item.populacao
+        }
+    });
+    res.json(formataPopulacao);
+}
+
 const savePopulacao = async (req, res)=>{
     await sequelize.sync();
     const populacaos = await Populacao.create({
@@ -40,6 +51,7 @@ const savePopulacao = async (req, res)=>{
 module.exports = {
     savePopulacao,
     populacaoTodosEstados,
+    populacaoMaisEstado,
     populacaoPorEstado,
     
 }

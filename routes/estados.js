@@ -3,6 +3,7 @@ const router = express.Router();
 
 const controlaEstados = require("../controller/estados");
 
-router.get("/", controlaEstados.buscaTodos);
+router.get("/", controlaEstados.buscaTodos)
+.post("/", controlaEstados.savEstado);
 
 module.exports = router;

@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('estados', 'rafael', 'rcha125?',{
-    host: 'localhost',
+const sequelize = new Sequelize('disponible', 'disponible', 'ra34ca22',{
+    host: 'mysql.disponible.com.br',
     dialect: 'mysql'
 });
 async function openDB(){

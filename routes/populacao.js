@@ -6,6 +6,9 @@ const controlaPopulacao = require("../controller/populacao");
 router.get("/", controlaPopulacao.populacaoTodosEstados)
 .post("/", controlaPopulacao.savePopulacao);
 
-router.get("/:uf", controlaPopulacao.populacaoPorEstado)
+router.get("/estados", controlaPopulacao.populacaoMaisEstado);
+
+router.get("/:uf", controlaPopulacao.populacaoPorEstado);
+
 
 module.exports = router;

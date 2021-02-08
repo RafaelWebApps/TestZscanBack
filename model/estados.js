@@ -1,7 +1,5 @@
 const { Sequelize, DataTypes, Model, where  } = require('sequelize');
-const {sequelize, openDB} = require("../configs/configBD");
-
-openDB();
+const {sequelize } = require("../configs/configBD");
 
 class Estados extends Model {}
 
