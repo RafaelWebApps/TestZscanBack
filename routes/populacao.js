@@ -3,10 +3,10 @@ const router = express.Router();
 
 const controlaPopulacao = require("../controller/populacao");
 
-router.get("/", controlaPopulacao.populacaoTodosEstados)
+router.get("/", controlaPopulacao.populacao )
 .post("/", controlaPopulacao.savePopulacao);
 
-router.get("/estados", controlaPopulacao.populacaoMaisEstado);
+router.get("/estados", controlaPopulacao.populacaoTodosEstados);
 
 router.get("/:uf", controlaPopulacao.populacaoPorEstado);
 

@@ -27,7 +27,7 @@ const populacaoPorEstado = async (req, res)=>{
     res.json(formataPopulacao);
 }
 
-const populacaoMaisEstado = async (req, res)=>{
+const populacao = async (req, res)=>{
     const obterTodos = await Populacao.findAll();
     const formataPopulacao = obterTodos.map(item=>{ 
         return {
@@ -51,7 +51,7 @@ const savePopulacao = async (req, res)=>{
 module.exports = {
     savePopulacao,
     populacaoTodosEstados,
-    populacaoMaisEstado,
+    populacao,
     populacaoPorEstado,
     
 }
